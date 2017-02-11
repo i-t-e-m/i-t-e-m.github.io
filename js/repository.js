@@ -14,7 +14,7 @@ window.addEventListener("load", function() {
 			for(let repo of this.el.children) {
 				let repoName = repo.getAttribute("data-repo");
 				repo.classList.add("repository");
-				this.titles.push(repo.children[0].innerHTML);
+				this.titles.push(repo.children[0].innerHTML.toLowerCase());
 				repo.children[0].classList.add("repo-name");
 				let page_btn = document.createElement("a");
 				page_btn.className = "page_btn";
@@ -30,7 +30,7 @@ window.addEventListener("load", function() {
 			this.inpSearch.addEventListener("keyup", this.search.bind(this));
 		}
 		search() {
-			let word = this.inpSearch.value;
+			let word = this.inpSearch.value.toLowerCase();
 			if(word) {
 				for(var i = 0; i < this.titles.length; i++) {
 					if(this.titles[i].indexOf(word) == -1) this.el.children[i].style.display = "none";
