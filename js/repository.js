@@ -16,7 +16,6 @@ window.addEventListener("load", function() {
 				repo.classList.add("repository");
 				this.titles.push(repo.children[0].innerHTML);
 				repo.children[0].classList.add("repo-name");
-				repo.children[1].classList.add("description");
 				let page_btn = document.createElement("a");
 				page_btn.className = "page_btn";
 				page_btn.setAttribute("href", SETTINGS.github.page + repoName);
@@ -24,7 +23,7 @@ window.addEventListener("load", function() {
 				let repo_btn = document.createElement("a");
 				repo_btn.className = "repo_btn";
 				repo_btn.setAttribute("href", SETTINGS.github.repo + repoName);
-				repo_btn.innerHTML = "<span class=\"git-icon\"></span><span>page</span>";
+				repo_btn.innerHTML = "<span class=\"git-icon\"></span><span>repo</span>";
 				repo.insertBefore(page_btn, repo.children[1]);
 				repo.insertBefore(repo_btn, repo.children[2]);
 			}

@@ -32,6 +32,8 @@ section h1 {
 	margin: .5rem;
 	padding: .2rem;
 }
+
+
 /*repository for js*/
 .repository {
 	display: block;
@@ -43,7 +45,12 @@ section h1 {
 	margin: .2rem;
 	background-color: #fff;
 	box-shadow: 4px 4px 4px #aaa;
-
+	word-break: break-all;
+	line-height: 1.5rem;
+}
+.repository h2 {
+	font-size: 1.2rem;
+	font-weight: bold;
 }
 @media screen and (max-width: 960px) {
 	.repository {
@@ -94,13 +101,4 @@ section h1 {
 	display: block;
 	background: url("../img/GitHub-Mark-Light-32px.png");
 	background-size: contain;
-}
-.repository .reponame {
-	font-size: 1.2rem;
-	font-weight: bold;
-}
-.repository .description {
-	width: 100%;
-	display: block;
-	word-break: break-all;
 }
