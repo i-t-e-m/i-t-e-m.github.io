@@ -96,8 +96,10 @@ section h1 {
 .repo_btn {
 	background-color: #ff4081;
 }
-.page_btn:hover::before, .repo_btn:hover::before {
+.page_btn:hover::after, .repo_btn:hover::after {
 	content: "";
+	left: 0;
+	top: 0;
 	position: absolute;
 	display: block;
 	width: 100%;
