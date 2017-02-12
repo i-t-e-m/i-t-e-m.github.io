@@ -16,6 +16,11 @@ window.addEventListener("load", function() {
 				repo.classList.add("repository");
 				this.titles.push(repo.children[0].innerHTML.toLowerCase());
 				repo.children[0].classList.add("repo-name");
+        // aタグラッパーのdiv生成・divプロパティー指定
+        let page_btn_wrapper = document.createElement("div");
+        page_btn_wrapper.className = "repository-btn_wrap";
+        let repo_btn_wrapper = page_btn_wrapper.cloneNode();
+        // aタグ及びaタグ以下のタグ生成・プロパティ指定
 				let page_btn = document.createElement("a");
 				page_btn.className = "page_btn";
 				page_btn.setAttribute("href", SETTINGS.github.page + repoName);
@@ -24,8 +29,11 @@ window.addEventListener("load", function() {
 				repo_btn.className = "repo_btn";
 				repo_btn.setAttribute("href", SETTINGS.github.repo + repoName);
 				repo_btn.innerHTML = "<span class=\"git-icon\"></span><span>repo</span>";
-				repo.insertBefore(page_btn, repo.children[1]);
-				repo.insertBefore(repo_btn, repo.children[2]);
+        // DOMツリー組み立て
+        page_btn_wrapper.appendChild(page_btn);
+        repo_btn_wrapper.appendChild(repo_btn);
+				repo.insertBefore(page_btn_wrapper, repo.children[1]);
+				repo.insertBefore(repo_btn_wrapper, repo.children[2]);
 			}
 			this.inpSearch.addEventListener("keyup", this.search.bind(this));
 		}
