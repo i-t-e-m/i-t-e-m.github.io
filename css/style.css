@@ -104,6 +104,8 @@ section h1 {
 	height: auto;
 }
 
+/*topやwidthなどの値は目視確認で調整しています。*/
+/*他にうまく修正できる方よろしくお願いします。*/
 .repository-btn_wrap:hover::after {
 	position: absolute;
 	top: 10%;
