@@ -11,7 +11,8 @@ window.addEventListener("load", function() {
 			this.init();
 		}
 		init() {
-			for(var repo of this.el.children) {
+			for(var i = 0; i < this.el.children.length) {
+				var repo = this.el.children[i];
 				var repoName = repo.getAttribute("data-repo");
 				repo.classList.add("repository");
 				this.titles.push(repo.children[0].innerHTML.toLowerCase());
@@ -37,7 +38,7 @@ window.addEventListener("load", function() {
 					else this.el.children[i].style.display = "block";
 				}
 			} else {
-				for(var el of this.el.children) el.style.display = "block";
+				for(var i = 0; i < this.el.children.length) this.el.children[i].style.display = "block";
 			}
 		}
 
