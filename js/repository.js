@@ -1,47 +1,66 @@
 "use strict"
-var SETTINGS = {
-	github: { page: "https://iti-group.github.io/", repo: "https://github.com/iti-group/" }
-};
+var repository;
 window.addEventListener("load", function() {
 	class Repository {
 		constructor() {
 			this.el = document.getElementById("repositories");
-			this.titles = [];
+			this.repos = DATA.repository;
 			this.inpSearch = document.getElementsByClassName("repo-search")[0];
 			this.init();
 		}
 		init() {
-			for(var i = 0; i < this.el.children.length; i++) {
-				var repo = this.el.children[i];
-				var repoName = repo.getAttribute("data-repo");
-				repo.classList.add("repository");
-				this.titles.push(repo.children[0].innerHTML.toLowerCase());
-				repo.children[0].classList.add("repo-name");
-				var page_btn = document.createElement("a");
-				page_btn.className = "page_btn";
-				page_btn.setAttribute("href", SETTINGS.github.page + repoName);
-				page_btn.innerHTML = "<span class=\"page-icon\"></span><span>page</span>";
-				var repo_btn = document.createElement("a");
-				repo_btn.className = "repo_btn";
-				repo_btn.setAttribute("href", SETTINGS.github.repo + repoName);
-				repo_btn.innerHTML = "<span class=\"git-icon\"></span><span>repo</span>";
-				repo.insertBefore(page_btn, repo.children[1]);
-				repo.insertBefore(repo_btn, repo.children[2]);
+			for(var i = this.repos.length - 1; 0 <= i; i--) {
+				this.repos[i].el = this.createRepo(this.repos[i]);
 			}
 			this.inpSearch.addEventListener("keyup", this.search.bind(this));
 		}
 		search() {
 			var word = this.inpSearch.value.toLowerCase();
 			if(word) {
-				for(var i = 0; i < this.titles.length; i++) {
-					if(this.titles[i].indexOf(word) == -1) this.el.children[i].style.display = "none";
-					else this.el.children[i].style.display = "block";
+				for(var i = 0; i < this.repos.length; i++) {
+					console.log(this.repos[i].title);
+					console.log(this.repos[i].title.indexOf(word));
+					if(this.repos[i].title.indexOf(word) == -1) this.repos[i].el.style.display = "none";
+					else this.repos[i].el.style.display = "block";
 				}
 			} else {
-				for(var i = 0; i < this.el.children.length; i++) this.el.children[i].style.display = "block";
+				for(var i = 0; i < this.repos.length; i++) this.repos[i].el.style.display = "block";
 			}
 		}
-
+		createRepo(repo) {
+			var wrap = document.createElement("li");
+			wrap.className = "repository";
+			var title = document.createElement("h2");
+			title.innerHTML = repo.title;
+			title.className = "repo_title";
+			var dataWrap = document.createElement("div");
+			dataWrap.className = "repo_data-wrap";
+			var author = document.createElement("small");
+			author.className = "repo_author";
+			author.innerHTML = repo.author;
+			var update = document.createElement("small");
+			update.className = "repo_update";
+			update.innerHTML = repo.modified;
+			var page_btn = document.createElement("a");
+			page_btn.className = "page-btn";
+			page_btn.setAttribute("href", "https://" + DATA.author[repo.author] + ".github.io/" + repo.repository);
+			page_btn.innerHTML = "<span class=\"page-icon\"></span><span>page</span>";
+			var repo_btn = document.createElement("a");
+			repo_btn.className = "repo-btn";
+			repo_btn.setAttribute("href", "https://github.com/" + DATA.author[repo.author] + "/" + repo.repository);
+			repo_btn.innerHTML = "<span class=\"git-icon\"></span><span>repo</span>";
+			var content = document.createElement("div");
+			content.innerHTML = repo.content;
+			wrap.appendChild(title);
+			wrap.appendChild(dataWrap);
+			dataWrap.appendChild(author);
+			dataWrap.appendChild(update);
+			wrap.appendChild(page_btn);
+			wrap.appendChild(repo_btn);
+			wrap.appendChild(content);
+			this.el.appendChild(wrap);
+			return wrap;
+		}
 	}
-	var repository = new Repository();
-})
+	repository = new Repository();
+});

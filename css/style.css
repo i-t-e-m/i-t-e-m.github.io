@@ -34,7 +34,7 @@ section h1 {
 }
 
 
-/*repository for js*/
+/* for repository js*/
 .repository {
 	display: block;
 	box-sizing: border-box;
@@ -64,7 +64,25 @@ section h1 {
 		max-width: 100%;
 	}
 }
-.page_btn, .repo_btn {
+.repository small {
+	color: #777;
+	font-size: .8rem;
+}
+.repo_data-wrap {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+}
+.repo_author,.repo_update {
+	margin-left: 2rem;
+}
+.repo_author::before {
+	content: "author: ";
+}
+.repo_update::before {
+	content: "update: ";
+}
+.page-btn, .repo-btn {
 	position: relative;
 	width: 5em;
 	height: 1rem;
@@ -78,17 +96,17 @@ section h1 {
 	border-radius: .5rem;
 	color: #fff;
 }
-.page_btn span, .repo_btn span {
+.page-btn span, .repo-btn span {
 	line-height: 1rem;
 }
-.page_btn {
+.page-btn {
 	background-color: #00bcd4;
 	margin-left: 0;
 }
-.repo_btn {
+.repo-btn {
 	background-color: #ff4081;
 }
-.page_btn:hover::after, .repo_btn:hover::after {
+.page-btn:hover::after, .repo-btn:hover::after {
 	content: "";
 	left: 0;
 	top: 0;
