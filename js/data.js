@@ -8,7 +8,7 @@ var DATA = {
 		{
 			repository: "gh_pages-manual",
 			title: "GitHub Pages と GitBook",
-			content: "<p>本マニュアルは、HAL東京IT学部の人たちが、GitHubを用いて勉強会をする上で</p>"
+			content: "<p>本マニュアルはGitHubを用いて勉強会をする上で</p>"
 				+"<ul style=\"list-style: disc; margin-left: 2rem;\"><li>"
 				+"GitHubに勉強会の内容を残してWebで公開したい</li>"
 				+"<li>見やすいwebページにしたい</li>"
@@ -44,6 +44,13 @@ var DATA = {
 			content: "C言語は他の言語に比べて汎用性が高い言語です。基本的に何でもできます。そして、何でもできるがゆえに面倒で難しい言語でもあります。ですがそれは、マスターさえすればあなたは何でもできるようになるということでもあります。この機会にC言語に触れてみてはいかがでしょうか",
 			author: "sato",
 			modified: "2017/02/15"
+		},
+        {
+			repository: "sass-sample",
+			title: "初めてのスタイルシート言語 ~Sass~",
+			content: "Sass（サース)はハンプトン・キャトリンが設計しネイサン・バイゼンバウムが開発したスタイルシート言語です。これでフロントの開発速度向上になれば幸いです。",
+			author: "minakawa",
+			modified: "2017/02/19"
 		},
 	]
 };
