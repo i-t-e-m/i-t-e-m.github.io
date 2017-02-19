@@ -45,11 +45,18 @@ var DATA = {
 			author: "sato",
 			modified: "2017/02/15"
 		},
-        {
+    {
 			repository: "sass-sample",
 			title: "初めてのスタイルシート言語 ~Sass~",
 			content: "Sass（サース)はハンプトン・キャトリンが設計しネイサン・バイゼンバウムが開発したスタイルシート言語です。これでフロントの開発速度向上になれば幸いです。",
 			author: "minakawa",
+			modified: "2017/02/19"
+		},
+		{
+			repository: "introduction_of_Rust",
+			title: "Rust入門",
+			content: "RustとはMozillaによって開発されている並列かつマルチパラダイムの安全性、速度、並行性の3つにフォーカスしたシステムプログラミング言語です。",
+			author: "yano",
 			modified: "2017/02/19"
 		},
 	]
