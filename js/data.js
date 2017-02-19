@@ -29,7 +29,7 @@ var DATA = {
 			title: "Markdownマニュアル",
 			content: "今後IT学生が簡易な文章を見やすく書く必要性に駆られるだろうことを予想し、素早く綺麗に書くことができるMarkdownの基本書式を示したマニュアルです。",
 			author: "sato",
-			modified: "2017/02/15"
+			modified: "2017/02/19"
 		},
 		{
 			repository: "nin-slider.js",
