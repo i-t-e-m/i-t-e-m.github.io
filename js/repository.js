@@ -11,21 +11,29 @@ window.addEventListener("load", function() {
 		init() {
 			for(var i = this.repos.length - 1; 0 <= i; i--) {
 				this.repos[i].el = this.createRepo(this.repos[i]);
+				this.repos[i].title = this.toHalfSize(this.repos[i].title).toLowerCase();
 			}
 			this.inpSearch.addEventListener("keyup", this.search.bind(this));
 		}
 		search() {
-			var word = this.inpSearch.value.toLowerCase();
+			var word = this.toHalfSize(this.inpSearch.value).toLowerCase();
 			if(word) {
 				for(var i = 0; i < this.repos.length; i++) {
-					console.log(this.repos[i].title);
-					console.log(this.repos[i].title.indexOf(word));
 					if(this.repos[i].title.indexOf(word) == -1) this.repos[i].el.style.display = "none";
 					else this.repos[i].el.style.display = "block";
 				}
 			} else {
 				for(var i = 0; i < this.repos.length; i++) this.repos[i].el.style.display = "block";
 			}
+		}
+		toHalfSize(str) {
+		str = str.replace(/[！-～]/g, function(tmp) { return String.fromCharCode(tmp.charCodeAt(0) - 0xFEE0); });
+  	return str.replace(/”/g, "\"")
+					    .replace(/’/g, "'")
+  					  .replace(/‘/g, "`")
+    					.replace(/￥/g, "\\")
+    					.replace(/　/g, " ")
+    					.replace(/〜/g, "~");
 		}
 		createRepo(repo) {
 			var wrap = document.createElement("li");
