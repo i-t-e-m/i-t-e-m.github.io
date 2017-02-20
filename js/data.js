@@ -2,7 +2,7 @@ var DATA = {
 	author: {
 		yano: "yanokunpei",
 		sato: "sugarnaoming",
-		minakawa: "minakawa-daiki"
+		minakawa: "minakawa-daiki",
 		nakahara: "SuguruNakahara"
 	},
 	repository : [
