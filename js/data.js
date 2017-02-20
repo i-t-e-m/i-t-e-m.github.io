@@ -47,7 +47,7 @@ var DATA = {
 			author: "sato",
 			modified: "2017/02/15"
 		},
-    {
+		{
 			repository: "sass-sample",
 			title: "初めてのスタイルシート言語 ~Sass~",
 			content: "Sass（サース)はハンプトン・キャトリンが設計しネイサン・バイゼンバウムが開発したスタイルシート言語です。これでフロントの開発速度向上になれば幸いです。",
