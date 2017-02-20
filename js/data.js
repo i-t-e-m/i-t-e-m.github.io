@@ -3,6 +3,7 @@ var DATA = {
 		yano: "yanokunpei",
 		sato: "sugarnaoming",
 		minakawa: "minakawa-daiki"
+		nakahara: "SuguruNakahara"
 	},
 	repository : [
 		{
