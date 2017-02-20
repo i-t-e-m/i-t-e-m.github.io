@@ -61,7 +61,7 @@ var DATA = {
 			author: "yano",
 			modified: "2017/02/19"
 		},
-				{
+		{
 			repository: "introduction_of_Heroku",
 			title: "Herokuの公開",
 			content: "Herokuの解説、公開についてです。",
