@@ -52,10 +52,12 @@ window.addEventListener("load", function() {
 			var page_btn = document.createElement("a");
 			page_btn.className = "page-btn";
 			page_btn.setAttribute("href", "https://" + DATA.author[repo.author] + ".github.io/" + repo.repository);
+      page_btn.setAttribute("target", "blank");
 			page_btn.innerHTML = "<span class=\"page-icon\"></span><span>page</span>";
 			var repo_btn = document.createElement("a");
 			repo_btn.className = "repo-btn";
 			repo_btn.setAttribute("href", "https://github.com/" + DATA.author[repo.author] + "/" + repo.repository);
+      repo_btn.setAttribute("target", "blank");
 			repo_btn.innerHTML = "<span class=\"git-icon\"></span><span>repo</span>";
 			var content = document.createElement("div");
 			content.innerHTML = repo.content;
