@@ -32,6 +32,8 @@ section h1 {
 .repo-search {
 	margin: .5rem;
 	padding: .2rem;
+  margin-right: 1rem;
+  z-index: 100;
 }
 
 
@@ -41,8 +43,8 @@ section h1 {
 	box-sizing: border-box;
 	border-radius: 5px;
 	padding: 1rem;
-	flex-basis: 32%;
-	max-width: 32%;
+	flex-basis: calc(33.333% - 0.4rem);
+	max-width: calc(33.333% - 0.4rem);
 	margin: .2rem;
 	background-color: #fff;
 	box-shadow: 4px 4px 4px #aaa;

@@ -2,7 +2,8 @@ var DATA = {
 	author: {
 		yano: "yanokunpei",
 		sato: "sugarnaoming",
-		minakawa: "minakawa-daiki"
+		minakawa: "minakawa-daiki",
+		nakahara: "SuguruNakahara"
 	},
 	repository : [
 		{
@@ -36,21 +37,30 @@ var DATA = {
 		},
 		{
 			repository: "clang_newbie",
-			title: "初めてのプログラム 〜C言語〜",
-			content: "C言語は古くから存在する言語です。そして、未だに消えない言語です。これからも消えなことでしょう。つまり、勉強して損をしない言語ということです。",
+			title: "C言語プログラミング",
+			content: "C言語は古くから存在する言語です。そして、未だに消えない言語です。これからも消えなことでしょう。つまり、勉強して損をしない言語ということです。"
+				+"<br>今後大幅な改定を行います。",
 			author: "sato"
 		},
-    {
+		{
 			repository: "sass-sample",
-			title: "初めてのスタイルシート言語 ~Sass~",
+			title: "初めてのスタイルシート言語 〜Sass〜",
 			content: "Sass（サース)はハンプトン・キャトリンが設計しネイサン・バイゼンバウムが開発したスタイルシート言語です。これでフロントの開発速度向上になれば幸いです。",
 			author: "minakawa"
 		},
 		{
 			repository: "introduction_of_Rust",
 			title: "Rust入門",
-			content: "RustはMozillaによって開発されている、高速に動作し、安全性、並行性、実用性にフォーカスしたシステムプログラミング言語です。",
+			content: "RustはMozillaによって開発されている、高速に動作し、安全性、並行性、実用性にフォーカスしたシステムプログラミング言語です。"
+			+"<br>今後更新していきます。",
 			author: "yano"
+		},
+		{
+			repository: "introduction_of_Heroku",
+			title: "Herokuの公開",
+			content: "Herokuの解説、公開についてです。",
+			author: "nakahara",
+			modified: "2017/02/20"
 		},
 	]
 };
