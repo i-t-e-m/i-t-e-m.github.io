@@ -3,7 +3,8 @@ var DATA = {
 		yano: "yanokunpei",
 		sato: "sugarnaoming",
 		minakawa: "minakawa-daiki",
-		nakahara: "SuguruNakahara"
+		nakahara: "SuguruNakahara",
+		ogata: "7vk1"
 	},
 	repository : [
 		{
@@ -66,7 +67,7 @@ var DATA = {
 		 	repository: "introduction_for_Docker",
 		 	title: "なんとなくわかるかもしれないDocker",
 		 	content: "読めばなんとなくDockerがわかるかもしれない、そんな内容です。",
-		 	author: "7vk1"
+		 	author: "ogatga"
 		},
 	]
 };
