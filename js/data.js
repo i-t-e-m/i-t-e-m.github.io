@@ -10,12 +10,11 @@ var DATA = {
 		{
 			repository: "gh_pages-manual",
 			title: "GitHub Pages と GitBook",
-			content: "<p>本マニュアルはGitHubを用いて勉強会をする上で</p>"
-				+"<ul style=\"list-style: disc; margin-left: 2rem;\"><li>"
+			content: "<ul style=\"list-style: disc; margin-left: 2rem;\"><li>"
 				+"GitHubに勉強会の内容を残してWebで公開したい</li>"
 				+"<li>見やすいwebページにしたい</li>"
 				+"<li>Markdownファイルを扱いたい</li></ul>"
-				+"<p>という要望が出るであろう予測に応えて、その道しるべとなるように作られたマニュアルです</p>",
+				+"<p>という要望に応えるために作られたマニュアルです</p>",
 			author: "minakawa"
 		},
 		{
