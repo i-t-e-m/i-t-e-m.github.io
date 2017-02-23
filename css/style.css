@@ -5,6 +5,7 @@ html {
 body {
 	background-color: #ddd;
 	overflow-x: hidden;
+	position: relative;
 }
 header {
 	background-color: #000;
