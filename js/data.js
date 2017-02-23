@@ -3,7 +3,8 @@ var DATA = {
 		yano: "yanokunpei",
 		sato: "sugarnaoming",
 		minakawa: "minakawa-daiki",
-		nakahara: "SuguruNakahara"
+		nakahara: "SuguruNakahara",
+		ogata: "7vk1"
 	},
 	repository : [
 		{
@@ -61,6 +62,12 @@ var DATA = {
 			content: "Herokuの解説、公開についてです。",
 			author: "nakahara",
 			modified: "2017/02/20"
+		},
+		{
+		 	repository: "introduction_for_Docker",
+		 	title: "なんとなくわかるかもしれないDocker",
+		 	content: "読めばなんとなくDockerがわかるかもしれない、そんな内容です。",
+		 	author: "ogatga"
 		},
 	]
 };
