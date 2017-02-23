@@ -36,6 +36,7 @@ window.addEventListener("load", function() {
 			this.el = document.getElementById("repositories");
 			this.repos = DATA.repository;
 			this.inpSearch = document.getElementsByClassName("repo-search")[0];
+			this.onDataRecieveCount = 0;
 			this.init();
 		}
 		init() {
@@ -65,9 +66,27 @@ window.addEventListener("load", function() {
     					.replace(/　/g, " ")
     					.replace(/〜/g, "~");
 		}
+		onDataRecieved() {
+			this.onDataRecieveCount++;
+			if(this.onDataRecieveCount >= this.repos.length) {
+				this.sortRepositories("update", "desc");
+			}
+		}
+		sortRepositories(key, order) {
+			var i = -1;
+			var j = 1;
+			if(order == "desc") {
+				i = 1;
+				j = -1;
+			}
+			this.repos.sort(function(a,b){
+        if( a[key] < b[key] ) return i;
+        if( a[key] > b[key] ) return j;
+        return 0;
+			});
+			for(var i = 0; i < this.repos.length; i++) this.repos[i].el.style.order = i;
+		}
 	}
-
-
 
 	class Repository {
 		constructor(parent, data) {
@@ -126,8 +145,10 @@ window.addEventListener("load", function() {
 			var url = "https://api.github.com/repos/" + DATA.author[this.author] + "/" + this.repository;
 			var success = function(data) {
 				this.setUpdate(new Date(JSON.parse(data).pushed_at));
-			}
-			Util.ajax("", url, "get", success.bind(this));
+				this.parent.onDataRecieved();
+			};
+			var err = function() { this.parent.onDataRecieved(); };
+			Util.ajax("", url, "get", success.bind(this), err.bind(this));
 		}
 	}
 	repository = new RepositoryController();
