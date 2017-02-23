@@ -67,7 +67,7 @@ var DATA = {
 		 	repository: "introduction_for_Docker",
 		 	title: "なんとなくわかるかもしれないDocker",
 		 	content: "読めばなんとなくDockerがわかるかもしれない、そんな内容です。",
-		 	author: "ogatga"
+		 	author: "ogata"
 		},
 	]
 };
