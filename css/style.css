@@ -90,9 +90,10 @@ section h1 {
 	}
 }
 .repository small {
+  width: auto;
 	color: #777;
 	font-size: .8rem;
-	margin-left: 2rem;
+	margin-left: 1rem;
 }
 .repo_data-wrap {
 	display: flex;

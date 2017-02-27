@@ -93,6 +93,7 @@ window.addEventListener("load", function() {
 			this.parent = parent;
 			this.repository = data.repository;
 			this.title = data.title;
+      this.tag = data.tag;
 			this.content = data.content;
 			this.author = data.author;
 			this.update;
@@ -113,6 +114,11 @@ window.addEventListener("load", function() {
 			author.innerHTML = this.author;
 			var update = document.createElement("small");
 			update.className = "repo_update";
+      
+      var tag = document.createElement("tag");
+      tag.className = this.tag.toLowerCase();
+      tag.innerHTML = this.tag;
+      
 			var page_btn = document.createElement("a");
 			page_btn.className = "page-btn";
 			page_btn.setAttribute("href", "https://" + DATA.author[this.author] + ".github.io/" + this.repository);
@@ -127,6 +133,7 @@ window.addEventListener("load", function() {
 			content.innerHTML = this.content;
 			wrap.appendChild(title);
 			wrap.appendChild(dataWrap);
+      dataWrap.appendChild(tag);
 			dataWrap.appendChild(author);
 			dataWrap.appendChild(update);
 			wrap.appendChild(page_btn);
