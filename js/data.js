@@ -11,10 +11,10 @@ var DATA = {
 			repository: "gh_pages-manual",
 			title: "GitHub Pages と GitBook",
 			content: "<ul style=\"list-style: disc; margin-left: 2rem;\"><li>"
-				+"GitHubに勉強会の内容を残してWebで公開したい</li>"
-				+"<li>見やすいwebページにしたい</li>"
-				+"<li>Markdownファイルを扱いたい</li></ul>"
-				+"<p>という要望に応えるために作られたマニュアルです</p>",
+				+ "GitHubに勉強会の内容を残してWebで公開したい</li>"
+				+ "<li>見やすいwebページにしたい</li>"
+				+ "<li>Markdownファイルを扱いたい</li></ul>"
+				+ "<p>という要望に応えるために作られたマニュアルです</p>",
 			author: "minakawa"
 		},
 		{
@@ -39,7 +39,7 @@ var DATA = {
 			repository: "clang_newbie",
 			title: "C言語プログラミング",
 			content: "C言語は古くから存在する言語です。そして、未だに消えない言語です。これからも消えなことでしょう。つまり、勉強して損をしない言語ということです。"
-				+"<br>今後大幅な改定を行います。",
+		    + "<br>今後大幅な改定を行います。",
 			author: "sato"
 		},
 		{
@@ -52,22 +52,21 @@ var DATA = {
 			repository: "introduction_of_Rust",
 			title: "Rust入門",
 			content: "RustはMozillaによって開発されている、高速に動作し、安全性、並行性、実用性にフォーカスしたシステムプログラミング言語です。"
-			+"<br>今後更新していきます。",
+      + "<br>今後更新していきます。",
 			author: "yano"
 		},
 		{
 			repository: "introduction_of_Heroku",
 			title: "Herokuの公開",
 			content: "Herokuの解説、公開についてです。",
-			author: "nakahara",
-			modified: "2017/02/20"
+			author: "nakahara"
 		},
 		{
-		 	repository: "introduction_for_Docker",
-		 	title: "なんとなくわかるかもしれないDocker",
-		 	content: "読めばなんとなくDockerがわかるかもしれない、そんな内容です。",
-		 	author: "ogata"
-		},
+      repository: "introduction_for_Docker",
+      title: "なんとなくわかるかもしれないDocker",
+      content: "読めばなんとなくDockerがわかるかもしれない、そんな内容です。",
+      author: "ogata"
+		}
 	]
 };
 		// {
