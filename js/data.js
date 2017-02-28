@@ -1,3 +1,4 @@
+"use strict"
 var DATA = {
 	author: {
 		yano: "yanokunpei",
@@ -9,39 +10,30 @@ var DATA = {
 	language: {
 		other: {
 			name: "Other",
-			style: { color: "#fff", "background-color": "#909" }
 		},
 		java: {
 			name: "Java",
-			style: { color: "#fff", "background-color": "#f00" }
 		},
 		javaee: {
 			name: "JavaEE",
-			style: { color: "#33c", "background-color": "#ccc" }
 		},
 		scala: {
 			name: "Scala",
-			style: { color: "#f00", "background-color": "#586E75" }
 		},
 		c: {
 			name: "C",
-			style: { color: "#f00", "background-color": "#00e" }
 		},
 		rust: {
 			name: "Rust",
-			style: { color: "#000", "background-color": "#fff", border: "solid" }
 		},
 		js: {
 			name: "JavaScript",
-			style: { color: "#000", "background-color": "#fe0" }
 		},
 		css: {
 			name: "CSS",
-			style: { color: "#fff", "background-color": "#33f" }
 		},
 		sass: {
 			name: "Sass",
-			style: { color: "#fff", "background-color": "#c69" }
 		},
 	},
 	repository: [

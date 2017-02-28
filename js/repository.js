@@ -115,11 +115,8 @@ window.addEventListener("load", function() {
 			var update = document.createElement("small");
 			update.className = "repo_update";
 			var lang = document.createElement("p");
-			lang.className = "repo_lang";
+			lang.className = "repo_lang lang-" + this.lang;
 			lang.innerHTML = DATA.language[this.lang].name;
-			var lang_style = "";
-			for(var atr in DATA.language[this.lang].style) lang_style += atr + ": " + DATA.language[this.lang].style[atr] + ";";
-			lang.setAttribute("style", lang_style);
 			var btn_wrap = document.createElement("div");
 			var page_btn = document.createElement("a");
 			page_btn.className = "page-btn";
