@@ -46,6 +46,14 @@ section h1 {
 	box-shadow: 2px 2px 2px #333;
 	font-family: 'Questrial',sans-serif;
 }
+.forkme:hover::before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255,.3);
+}
 #repositories {
 	display: flex;
 	flex-wrap: wrap;
@@ -117,9 +125,21 @@ section h1 {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-end;
+	align-items: center;
 }
 .repo_author {
 	width: 8rem;
+	text-align: right;
+}
+.repo_lang {
+	width:6rem;
+	text-align: center;
+	box-sizing: border-box;
+	cursor: pointer;
+	font-size: .8rem;
+}
+.repo_update {
+	display: block;
 	text-align: right;
 }
 .repo_author::before {
