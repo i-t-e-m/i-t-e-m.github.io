@@ -1,0 +1,41 @@
+tag {
+  color: #777;
+  font-size: .8rem;
+  margin-left: 1rem;
+  padding: 0 .2rem;
+  border-radius: 5px;
+}
+tag.scala {
+  color: #7dd3b0;
+}
+tag.java {
+  color: #b07219;
+}
+tag.javaee {
+  color: #b07219;
+}
+tag.sass {
+  color: #563d7c;
+}
+tag.css {
+  color: #563d7c;
+}
+tag.rust {
+  color: #dea584;
+}
+tag.c {
+  color: #555555;
+}
+tag.javascript {
+  color: #f1e05a;
+}
+tag.manual {
+  color: #ccce35;
+}
+tag.other {
+  color: #aa2afe;
+}
+tag::before {
+  content: "category: ";
+  color: #777;
+}

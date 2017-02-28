@@ -58,13 +58,13 @@ window.addEventListener("load", function() {
 			}
 		}
 		toHalfSize(str) {
-		str = str.replace(/[！-～]/g, function(tmp) { return String.fromCharCode(tmp.charCodeAt(0) - 0xFEE0); });
-  	return str.replace(/”/g, "\"")
-					    .replace(/’/g, "'")
-  					  .replace(/‘/g, "`")
-    					.replace(/￥/g, "\\")
-    					.replace(/　/g, " ")
-    					.replace(/〜/g, "~");
+			str = str.replace(/[！-～]/g, function(tmp) { return String.fromCharCode(tmp.charCodeAt(0) - 0xFEE0); });
+			return str.replace(/”/g, "\"")
+							.replace(/’/g, "'")
+							.replace(/‘/g, "`")
+							.replace(/￥/g, "\\")
+							.replace(/　/g, " ")
+							.replace(/〜/g, "~");
 		}
 		onDataRecieved() {
 			this.onDataRecieveCount++;
@@ -80,9 +80,9 @@ window.addEventListener("load", function() {
 				j = -1;
 			}
 			this.repos.sort(function(a,b){
-        if( a[key] < b[key] ) return i;
-        if( a[key] > b[key] ) return j;
-        return 0;
+				if( a[key] < b[key] ) return i;
+				if( a[key] > b[key] ) return j;
+				return 0;
 			});
 			for(var i = 0; i < this.repos.length; i++) this.repos[i].el.style.order = i;
 		}
@@ -93,6 +93,7 @@ window.addEventListener("load", function() {
 			this.parent = parent;
 			this.repository = data.repository;
 			this.title = data.title;
+			this.lang = data.lang;
 			this.content = data.content;
 			this.author = data.author;
 			this.update;
@@ -113,6 +114,12 @@ window.addEventListener("load", function() {
 			author.innerHTML = this.author;
 			var update = document.createElement("small");
 			update.className = "repo_update";
+			var lang = document.createElement("p");
+			lang.className = "repo_lang";
+			lang.innerHTML = DATA.language[this.lang].name;
+			var lang_style = "";
+			for(var atr in DATA.language[this.lang].style) lang_style += atr + ": " + DATA.language[this.lang].style[atr] + ";";
+			lang.setAttribute("style", lang_style);
 			var page_btn = document.createElement("a");
 			page_btn.className = "page-btn";
 			page_btn.setAttribute("href", "https://" + DATA.author[this.author] + ".github.io/" + this.repository);
@@ -127,6 +134,7 @@ window.addEventListener("load", function() {
 			content.innerHTML = this.content;
 			wrap.appendChild(title);
 			wrap.appendChild(dataWrap);
+			dataWrap.appendChild(lang);
 			dataWrap.appendChild(author);
 			dataWrap.appendChild(update);
 			wrap.appendChild(page_btn);

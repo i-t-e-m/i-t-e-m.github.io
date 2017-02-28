@@ -98,16 +98,27 @@ section h1 {
 	}
 }
 .repository small {
+  width: auto;
 	color: #777;
 	font-size: .8rem;
+	margin-left: 1rem;
 }
 .repo_data-wrap {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-end;
+	align-items: center;
 }
-.repo_author,.repo_update {
-	margin-left: 2rem;
+.repo_author {
+	width: 8rem;
+	text-align: right;
+}
+.repo_lang {
+	width:6rem;
+	text-align: center;
+	box-sizing: border-box;
+	cursor: pointer;
+	font-size: .8rem;
 }
 .repo_author::before {
 	content: "author: ";
