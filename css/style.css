@@ -120,6 +120,10 @@ section h1 {
 	cursor: pointer;
 	font-size: .8rem;
 }
+.repo_update {
+	display: block;
+	text-align: right;
+}
 .repo_author::before {
 	content: "author: ";
 }
