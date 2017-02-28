@@ -2,23 +2,24 @@
 /*.lang-langname*/
 .lang-other {
 	color: #fff;
-	background-color: #909 }
+	background-color: #909;
 }
 .lang-java {
 	color: #fff;
-	background-color: #f00
+	background-color: #f00;
 }
 .lang-javaee {
 	color: #33c;
 	background-color: #ccc;
 }
 .lang-scala {
-	color: #f00;
-	background-color: #586E75
+	color: #eee;
+	background-color: #36742D;
+  font-weight: bold;
 }
 .lang-c {
-	color: #f00;
-	background-color: #00e
+	color: #eee;
+	background-color: #1E3A67;
 }
 .lang-rust {
 	color: #000;
