@@ -103,6 +103,10 @@ window.addEventListener("load", function() {
 			});
 			for(var i = 0; i < this.repos.length; i++) this.repos[i].el.style.order = i;
 		}
+		setSearchWord(word) {
+			this.inpSearch.value = word;
+			this.search();
+		}
 	}
 
 	class Repository {
@@ -134,6 +138,7 @@ window.addEventListener("load", function() {
 			var lang = document.createElement("p");
 			lang.className = "repo_lang lang-" + this.lang;
 			lang.innerHTML = DATA.language[this.lang].name;
+			lang.addEventListener("click", this.parent.setSearchWord.bind(this.parent, "lang:" + this.lang));
 			var btn_wrap = document.createElement("div");
 			var page_btn = document.createElement("a");
 			page_btn.className = "page-btn";
