@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Questrial|Source+Sans+Pro');
+@import url('http://fonts.googleapis.com/earlyaccess/notosansjp.css');
 html {
 	overflow-x: hidden;
 }
@@ -8,18 +10,22 @@ body {
 	position: relative;
 }
 header {
-	background-color: #000;
+	background-color: #333333;
+	height:9rem;
 }
 header h1 {
 	color: #fff;
 	text-align: center;
-	font-size: 3rem;
-	padding: 1rem;
+	font-size: 4rem;
+	padding: 2.5rem 1rem 1rem 1rem;
 	font-weight: bold;
+	font-family: 'Questrial',sans-serif;
+
 }
 section h1 {
 	font-size: 2rem;
 	padding: .5rem;
+	font-family: 'Questrial',sans-serif;
 }
 .forkme {
 	position: absolute;
@@ -38,41 +44,53 @@ section h1 {
 	transform: rotateZ(45deg);
 	text-align: center;
 	box-shadow: 2px 2px 2px #333;
+	font-family: 'Questrial',sans-serif;
 }
 #repositories {
 	display: flex;
 	flex-wrap: wrap;
 	padding: 1rem;
+	font-family: 'Source Sans Pro','Noto Sans JP',sans-serif;
 }
 .repository_top-wrap {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin-right: 2rem;
 	flex-wrap: wrap;
+	margin-top: 1.5rem;
+	margin-bottom:0.2rem;
+
+}
+.repo-toptitle{
+	margin-left: 0.8rem;
+
 }
 .repo-search {
+	font-size: 1.1rem;
+	line-height:1.2rem;
+	border:solid 1px #ccc;
+	border-radius: 3px;
 	margin: .5rem;
 	padding: .2rem;
-  margin-right: 1rem;
-  z-index: 100;
+	margin-left: 1.2rem;
+    margin-right: 1.2rem;
+    z-index: 100;
 }
-
 
 /* for repository js*/
 .repository {
 	display: block;
 	box-sizing: border-box;
-	border-radius: 5px;
+	border-radius: 3px;
 	padding: 1rem;
 	flex-basis: calc(33.333% - 0.4rem);
 	max-width: calc(33.333% - 0.4rem);
 	margin: .2rem;
 	background-color: #fff;
-	box-shadow: 4px 4px 4px #aaa;
 	word-break: break-all;
 	line-height: 1.5rem;
 }
+
 .repository h2 {
 	font-size: 1.2rem;
 	font-weight: bold;
@@ -112,16 +130,15 @@ section h1 {
 }
 .page-btn, .repo-btn {
 	position: relative;
-	width: 5em;
-	height: 1rem;
-	line-height: .5rem;
+	width: 5.5em;
+	height: 1.2rem;
+	line-height: .8rem;
 	text-align: center;
 	padding: .2rem;
 	margin: .2em;
 	text-decoration: none;
 	display: inline-block;
-	border: outset;
-	border-radius: .5rem;
+	border-radius: .3rem;
 	color: #fff;
 }
 .page-btn span, .repo-btn span {
@@ -132,7 +149,7 @@ section h1 {
 	margin-left: 0;
 }
 .repo-btn {
-	background-color: #ff4081;
+	background-color: #464646;
 }
 .page-btn:hover::after, .repo-btn:hover::after {
 	content: "";

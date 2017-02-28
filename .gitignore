@@ -1,0 +1,5 @@
+#intellijIDA ignore
+
+*.swp
+*.iml
+/.idea
