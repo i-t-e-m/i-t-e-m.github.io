@@ -12,6 +12,7 @@ body {
 header {
 	background-color: #333333;
 	height:9rem;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 }
 header h1 {
 	color: #fff;
@@ -37,8 +38,8 @@ section h1 {
 	font-weight: bold;
 	border: dotted 1.5px #fff;
 	line-height: 30px;
-	background-color: #b00;
-	background: linear-gradient(#d00, #800);
+	background-color: #009688;
+	background: linear-gradient(#80CBC4, #00897B);
 	text-decoration: none;
 	color: #eee;
 	transform: rotateZ(45deg);
@@ -83,6 +84,7 @@ section h1 {
 	margin-left: 1.2rem;
     margin-right: 1.2rem;
     z-index: 100;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.16), 0 1px 3px rgba(0,0,0,0.2);
 }
 
 /* for repository js*/
@@ -97,12 +99,15 @@ section h1 {
 	background-color: #fff;
 	word-break: break-all;
 	line-height: 1.5rem;
+
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
 .repository h2 {
 	font-size: 1.2rem;
 	font-weight: bold;
 }
+
 @media screen and (max-width: 960px) {
 	.repository {
 		flex-basis: calc(50% - .4rem);
@@ -148,45 +153,56 @@ section h1 {
 .repo_update::before {
 	content: "update: ";
 }
+
+.btn_wrap{
+	font-family: 'Questrial',sans-serif;
+	text-align: center;
+}
+
 .page-btn, .repo-btn {
-	position: relative;
-	width: 5.5em;
-	height: 1.2rem;
-	line-height: .8rem;
+	width: 6.5rem;
+	height: 2rem;
+	line-height: 1.8rem;
 	text-align: center;
 	padding: .2rem;
-	margin: .2em;
+	margin: 0.5em .2em;
+	 ;
 	text-decoration: none;
 	display: inline-block;
 	border-radius: .3rem;
 	color: #fff;
+	font-size: 20px;
+
+	transition: box-shadow 0.2s cubic-bezier(0.5, 0, 0.3, 1);
+	transition-delay: 0.2s;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
 }
+
+.page-btn:hover,.repo-btn:hover{
+	box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.25);
+	transition-delay: 0s;
+}
+
+
 .page-btn span, .repo-btn span {
 	line-height: 1rem;
 }
 .page-btn {
-	background-color: #00bcd4;
+	background-color: #607D8B;
 	margin-left: 0;
 }
 .repo-btn {
 	background-color: #464646;
 }
-.page-btn:hover::after, .repo-btn:hover::after {
-	content: "";
-	left: 0;
-	top: 0;
-	position: absolute;
-	display: block;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(255,255,255,.3);
-}
+
 .git-icon, .page-icon {
 	width: 1rem;
 	height: 1rem;
 	display: block;
 	float: left;
+	margin:.5rem 0 0 0.9rem ;
 	background-size: contain;
+
 }
 .git-icon {
 	background-image: url("../img/GitHub-Mark-Light-32px.png");

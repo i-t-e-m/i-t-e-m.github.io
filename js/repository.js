@@ -121,6 +121,7 @@ window.addEventListener("load", function() {
 			for(var atr in DATA.language[this.lang].style) lang_style += atr + ": " + DATA.language[this.lang].style[atr] + ";";
 			lang.setAttribute("style", lang_style);
 			var btn_wrap = document.createElement("div");
+			btn_wrap.className="btn_wrap"
 			var page_btn = document.createElement("a");
 			page_btn.className = "page-btn";
 			page_btn.setAttribute("href", "https://" + DATA.author[this.author] + ".github.io/" + this.repository);
@@ -138,10 +139,12 @@ window.addEventListener("load", function() {
 			dataWrap.appendChild(lang);
 			dataWrap.appendChild(author);
 			wrap.appendChild(update);
-			wrap.appendChild(btn_wrap);
-			btn_wrap.appendChild(page_btn);
-			btn_wrap.appendChild(repo_btn);
+            wrap.appendChild(btn_wrap);
+            btn_wrap.appendChild(page_btn);
+            btn_wrap.appendChild(repo_btn);
 			wrap.appendChild(content);
+
+
 			this.parent.el.appendChild(wrap);
 			this.els.update = update;
 			this.el = wrap;
