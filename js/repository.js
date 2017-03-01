@@ -47,11 +47,28 @@ window.addEventListener("load", function() {
 			this.inpSearch.addEventListener("keyup", this.search.bind(this));
 		}
 		search() {
-			var word = this.toHalfSize(this.inpSearch.value).toLowerCase();
-			if(word) {
+			var words = this.toHalfSize(this.inpSearch.value).toLowerCase();
+			if(words) {
+				words = words.split(" ");
 				for(var i = 0; i < this.repos.length; i++) {
-					if(this.repos[i].title.indexOf(word) == -1) this.repos[i].el.style.display = "none";
-					else this.repos[i].el.style.display = "block";
+					var flag = true;
+					for(var j = 0; j < words.length; j++) {
+						if(words[j].startsWith("lang:")) {
+							var word = words[j].replace("lang:" ,"");
+							if(this.repos[i].lang != word) flag = false;
+						}
+						else if(words[j].startsWith("author:")) {
+							var word = words[j].replace("author:" ,"");
+						 if(this.repos[i].author.indexOf(word) == -1) flag = false;
+						}
+						else if(words[j].startsWith("content:")) {
+							var word = words[j].replace("content:" ,"");
+							if(this.repos[i].content.indexOf(word) == -1) flag = false;
+						}
+						else { if(this.repos[i].title.indexOf(words[j]) == -1) flag = false; }
+					}
+					if(flag) this.repos[i].el.style.display = "block";
+					else this.repos[i].el.style.display = "none";
 				}
 			} else {
 				for(var i = 0; i < this.repos.length; i++) this.repos[i].el.style.display = "block";
@@ -60,11 +77,11 @@ window.addEventListener("load", function() {
 		toHalfSize(str) {
 			str = str.replace(/[！-～]/g, function(tmp) { return String.fromCharCode(tmp.charCodeAt(0) - 0xFEE0); });
 			return str.replace(/”/g, "\"")
-							.replace(/’/g, "'")
-							.replace(/‘/g, "`")
-							.replace(/￥/g, "\\")
-							.replace(/　/g, " ")
-							.replace(/〜/g, "~");
+								.replace(/’/g, "'")
+								.replace(/‘/g, "`")
+								.replace(/￥/g, "\\")
+								.replace(/　/g, " ")
+								.replace(/〜/g, "~");
 		}
 		onDataRecieved() {
 			this.onDataRecieveCount++;
@@ -85,6 +102,10 @@ window.addEventListener("load", function() {
 				return 0;
 			});
 			for(var i = 0; i < this.repos.length; i++) this.repos[i].el.style.order = i;
+		}
+		setSearchWord(word) {
+			this.inpSearch.value = word;
+			this.search();
 		}
 	}
 
@@ -115,11 +136,9 @@ window.addEventListener("load", function() {
 			var update = document.createElement("small");
 			update.className = "repo_update";
 			var lang = document.createElement("p");
-			lang.className = "repo_lang";
+			lang.className = "repo_lang lang-" + this.lang;
 			lang.innerHTML = DATA.language[this.lang].name;
-			var lang_style = "";
-			for(var atr in DATA.language[this.lang].style) lang_style += atr + ": " + DATA.language[this.lang].style[atr] + ";";
-			lang.setAttribute("style", lang_style);
+			lang.addEventListener("click", this.parent.setSearchWord.bind(this.parent, "lang:" + this.lang));
 			var btn_wrap = document.createElement("div");
 			btn_wrap.className="btn_wrap"
 			var page_btn = document.createElement("a");
