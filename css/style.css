@@ -36,15 +36,14 @@ section h1 {
 	height: 28px;
 	font-size: .7rem;
 	font-weight: bold;
-	border: dotted 1.5px #fff;
+	border: solid 1.5px #607D8B;
 	line-height: 30px;
-	background-color: #009688;
-	background: linear-gradient(#80CBC4, #00897B);
+	background-color: #607D8B;
 	text-decoration: none;
 	color: #eee;
 	transform: rotateZ(45deg);
 	text-align: center;
-	box-shadow: 2px 2px 2px #333;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
 	font-family: 'Questrial',sans-serif;
 }
 .forkme:hover::before {
@@ -99,7 +98,6 @@ section h1 {
 	background-color: #fff;
 	word-break: break-all;
 	line-height: 1.5rem;
-
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 }
 
@@ -121,7 +119,7 @@ section h1 {
 	}
 }
 .repository small {
-  width: auto;
+  	width: auto;
 	color: #777;
 	font-size: .8rem;
 	margin-left: 1rem;
