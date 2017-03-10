@@ -72,8 +72,7 @@ var DATA = {
 		{
 			repository: "clang_newbie",
 			title: "C言語プログラミング",
-			content: "C言語は古くから存在する言語です。そして、未だに消えない言語です。これからも消えなことでしょう。つまり、勉強して損をしない言語ということです。"
-				+ "<br>今後大幅な改定を行います。",
+			content: "現在改装中",
 			author: "sato",
 			lang: "c",
 		},
