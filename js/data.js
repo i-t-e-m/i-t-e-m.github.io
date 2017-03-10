@@ -5,7 +5,8 @@ var DATA = {
 		sato: "sugarnaoming",
 		minakawa: "minakawa-daiki",
 		nakahara: "SuguruNakahara",
-		ogata: "7vk1"
+		ogata: "7vk1",
+		nakajima: "nakajimashunsuke"
 	},
 	language: {
 		other: {
@@ -104,7 +105,14 @@ var DATA = {
 			content: "読めばなんとなくDockerがわかるかもしれない、そんな内容です。",
 			author: "ogata",
 			lang: "other",
-		}
+		},
+		{
+			repository: "introduction_for_python3",
+			title: "自分が学んだPython3の基礎知識",
+			content: "可読性が自分を成長させる言語pythonそんな言語だと思います",
+			author: "nakajima",
+			lang: "other",
+		},
 	]
 };
 		// {
