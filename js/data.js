@@ -94,7 +94,7 @@ var DATA = {
 		},
 		{
 			repository: "introduction_of_Heroku",
-			title: "Herokuの公開",
+			title: "Heroku",
 			content: "Herokuの解説、公開についてです。",
 			author: "nakahara",
 			lang: "other",
