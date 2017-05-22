@@ -71,13 +71,6 @@ var DATA = {
 			lang: "js",
 		},
 		{
-			repository: "clang_newbie",
-			title: "C言語プログラミング",
-			content: "現在改装中",
-			author: "sato",
-			lang: "c",
-		},
-		{
 			repository: "sass-sample",
 			title: "初めてのスタイルシート言語 〜Sass〜",
 			content: "Sass（サース)はハンプトン・キャトリンが設計しネイサン・バイゼンバウムが開発したスタイルシート言語です。これでフロントの開発速度向上になれば幸いです。",
