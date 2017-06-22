@@ -106,6 +106,13 @@ var DATA = {
 			author: "nakajima",
 			lang: "other",
 		},
+		{
+			repository: "clang_gitbook",
+			title: "Simply C lang ",
+			content: "Be careful when using C language.",
+			author: "sato",
+			lang: "c",
+		},
 	]
 };
 		// {
