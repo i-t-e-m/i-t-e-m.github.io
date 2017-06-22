@@ -93,13 +93,6 @@ var DATA = {
 			lang: "other",
 		},
 		{
-			repository: "introduction_for_Docker",
-			title: "なんとなくわかるかもしれないDocker",
-			content: "読めばなんとなくDockerがわかるかもしれない、そんな内容です。",
-			author: "ogata",
-			lang: "other",
-		},
-		{
 			repository: "introduction_for_python3",
 			title: "自分が学んだPython3の基礎知識",
 			content: "可読性が自分を成長させる言語pythonそんな言語だと思います",
