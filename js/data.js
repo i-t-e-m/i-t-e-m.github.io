@@ -112,7 +112,7 @@ var DATA = {
 			content: "Be careful when using C language.",
 			author: "sato",
 			lang: "c",
-		},
+		}
 	]
 };
 		// {
