@@ -36,6 +36,9 @@ var DATA = {
 		sass: {
 			name: "Sass",
 		},
+		android: {
+			name: "Android"
+		},
 	},
 	repository: [
 		{
@@ -105,6 +108,13 @@ var DATA = {
 			content: "Be careful when using C language.",
 			author: "sato",
 			lang: "c",
+		},
+		{
+			repository: "AndroidWithKotlinMemo",
+			title: "Android with Kotlin備忘録",
+			content: "AndroidでKotlinを使う時の備忘録です",
+			author: "sato",
+			lang: "android",
 		}
 	]
 };
